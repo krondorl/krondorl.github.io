@@ -1,0 +1,41 @@
+body {
+  background: #fefefe;
+  color: #666;
+  font: normal 18px "PT Sans", sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  color: #f90;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.grid {
+  border: 1px solid #f90;
+}
+
+.noborder .grid-item,
+.grid.noborder {
+  border: 0;
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid-item {
+  border: 1px solid #f90;
+  flex: 1;
+  padding: 1em;
+}
+
+@media all and (max-width: 900px) {
+  .grid-row {
+    flex-direction: column;
+  }
+}

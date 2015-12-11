@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adam Burucs - pet projects page</title>
+  <style>
+    html {
+      font-size: 18px;
+    }
+
+    body {
+      background: #fefefe;
+      color: #555;
+      font: 1rem/1.5rem Tahoma, sans-serif;
+    }
+
+    a {
+      color: #3b3bed;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #5e5e9d;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pet projects of Adam Burucs</h1>
+  <p>I created these projects for personal development.</p>
+  <h2>CSS</h2>
+  <ul>
+    <li><a href="/character/">Real Life Character Sheet</a></li>
+    <li><a href="/andrey-pushkarev/">Andrey Pushkarev A38 party</a></li>
+    <li><a href="/flexbox-grid/">Flexbox grid</a></li>
+    <li><a href="/infinity-ink/">Infinity Ink</a></li>
+    <li><a href="/mbk/">MBK</a></li>
+    <li><a href="/firegate-audio/">Firegate Audio</a></li>
+  </ul>
+  <h2>JavaScript</h2>
+  <ul>
+    <li><a href="/abcalc/">Abcalc</a></li>
+    <li><a href="/fibonacci/">Fibonacci</a></li>
+    <li><a href="/the-javascript-hype/">The JavaScript Hype</a></li>
+  </ul>
+  <p>Since 16th September 2015</p>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var a = document.getElementsByTagName('a');
+      for (var i = 0; i < a.length; i++) {
+        a[i].setAttribute('target', '_blank');
+      }
+    });
+  </script>
+</body>
+</html>

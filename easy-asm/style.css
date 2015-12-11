@@ -1,0 +1,56 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  background: #fff;
+  color: #666;
+  font: normal 1.5rem/2rem "Source Sans Pro", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 80rem;
+}
+
+main div {
+  display: inline-block;
+  margin-right: 1%;
+  vertical-align: top;
+  width: 49%;
+}
+
+main div + div {
+  margin: 0;
+}
+
+textarea {
+  border: .5rem solid #ddd;
+  font-family: monospace;
+  font-weight: bold;
+  height: 18rem;
+  padding: .5rem;
+  width: 97%;
+}
+
+#run {
+  border: .2rem solid #ddd;
+  padding: 2rem 4rem;
+}
+
+#code {
+  color: #090;
+}
+
+#output {
+  color: #990;
+}

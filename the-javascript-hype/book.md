@@ -6,17 +6,24 @@ I started writing this book, because I wanted to refresh and upgrade my knowledg
 
 ## Introduction
 
-JavaScript is a multi-paradigm, high-level, dynamic, untyped, interpreted programming language. Brendan Eich designed the language in 1995. Despite the similar naming and syntax, JavaScript and Java are two very different programming languages. JavaScript supports prototype-based object-oriented, imperative, and functional programming styles.
+JavaScript is a multi-paradigm, high-level, dynamic, untyped, interpreted programming language. Brendan Eich designed the language in 1995. Despite the similar naming and syntax, JavaScript and Java are two very different programming languages.
+
+JavaScript | Java
+-----------|------
+prototype based inheritance | classical inheritance
+dynamic typing | static typing
+interpreted language | compiled language
+function scope | block scope
 
 JavaScript can be found both on the client side (Internet browsers can handle it without a plugin as part of a webpage) and server side (Node.js).
 
-The standardized version name of the language is called ECMAScript. This guide contains elements from the latest versions of ECMAScript like 5 (December 2009), 5.1 (June 2011) and 6 (June 2015). Since 2012, all modern browsers fully support ECMAScript 5.1.
+The standardized version name of the language is called ECMAScript. This guide contains elements from the latest versions of ECMAScript like 5 (December 2009), 5.1 (June 2011) and 6 (June 2015). Since 2012, all modern browsers fully support ECMAScript 5.1. The ECMAScript standard is approved by the ISO (International Organization for Standardization).
 
 ## Tools
 
-Basically a web browser is enough to run JavaScript code. I recommend using Google Chrome or Mozilla Firefox, because they got probably the best features for development. In Chrome press Ctrl + Shift + J or press Ctrl + Shift + I in Firefox, then select the Console tab.
+Basically a web browser is enough to run JavaScript code. I recommend using Google Chrome or Mozilla Firefox, because they got probably the best features for development. In Chrome press `Ctrl + Shift + J` or press `Ctrl + Shift + I` in Firefox, then select the Console tab.
 
-You can also use an online development environment, like JS Bin JSFiddle or CodePen.
+You can also use an online development environment, like [JS Bin](http://jsbin.com/?html,output), [JSFiddle](https://jsfiddle.net/) or [CodePen](http://codepen.io/).
 
 My favorite frontend development desktop application is Brackets. I use it for the full client side stack HTML, CSS and JavaScript. There are plugins as well for using with scripting languages like PHP, Ruby, Python or Perl among others.
 
@@ -30,26 +37,26 @@ Boolean: logical value, can be true or false.
 var isItChristmas = false;
 ```
 
-null. The standard  null value. Note that it is case sensitive.
+The standard null value. Note that it is case sensitive.
 
 ```
 var foo = null;
 ```
 
-undefined: this means that the variable doesn't have an assiegned value.
+Undefined: this means that the variable doesn't have an assiegned value.
 
 ```
 var x;
 ```
 
-Number.
+Number. Can be integer or floating point.
 
 ```
 var personAge = 55;
 var pi = 3.1415;
 ```
 
-String. "Howdy"
+String. One or more characters in a sequence.
 
 ```
 var personName = "Albert Einstein";
@@ -300,6 +307,33 @@ function credits() {
 }
 ```
 
+## Anonymous functions
+
+This is considered a best practice as the code inside the anonymous function isn't part of the global scope. With this technique you can avoid naming collisions.
+
+```
+(function () {
+  var dogName = "Alfie"; 
+  console.log("I have got a dog called Alfie.");
+})();
+console.log(dogName); // error
+```
+
+## Arrow functions
+
+Since ES6 functions can be defined with arrow. At the moment it is recommended, that you use the arrow functions only for lambdas and functions using this. Arrow functions share the same `this` context of their parents, so there is no need to define a reference to it.
+
+```
+// default syntax
+function mult(a, b) {
+  return a * b;
+}
+
+// arrow syntax, multiply two numbers
+mult = (a, b) => a * b
+mult(5, 10); // 50
+```
+
 ## Closures
 
 A closure is like local variables for a function, which is  kept alive after the function has returned. The local variable is not copied, but used by reference.
@@ -372,7 +406,111 @@ switch (animal) {
 
 ## Error handling statements
 
+You can generate an exception with throw and handle them using `try...catch` and `try...catch...finally` statements. The `finally` block always executes regardless of the `try` and `catch` sections. Nesting is allowed for `try...catch` statements. When an inner statement doesn't have a `catch`, then an outer section is waiting to handle it.
 
+```
+try {
+  n = getNumber(x);
+  if (n === 0) {
+    throw "ZeroNumber"; // possible error
+  }
+} catch (e) {
+  console.log(e); // print the exception to console
+}
+
+try {
+  n = getNumber(x);
+  if (n === 0) {
+    throw "ZeroNumber";
+  }
+} catch (e) {
+  console.log(e);
+} finally {
+  console.log('operation finished');
+}
+```
+
+## Promises
+
+Promises appeared in ECMAScript 6 and they allow to control the flow of deferred and asynchronous operations. Async tasks can be data requests, animation, user interaction, hardware responses, component activities. Promises make easier writing chains and waiting for resolving as well. Before the native language feature several libraries already had some form of implementation of promises, like jQuery, YUI and Bluebird.
+
+The states of a promise are:
+
+* pending: initial state, neither fulfilled nor rejected
+* fulfilled: successful operation
+* rejected: failed operation
+* settled: fulfilled or rejected, but not pending
+
+```
+function delay(t) {
+  return new Promise(function(resolve, reject) {
+    setTimeout(function() {
+      resolve();
+    }, t);
+  });
+}
+
+delay(1000).then(function() {
+  console.log("command after delay");
+});
+```
+
+## Loops
+
+Loops provide a way to do tasks repeatedly.
+
+### for loop
+
+A for loop is running until the given condition will be false. This is working similarly to Java and C.
+
+```
+var i;
+for (i = 0; i < 3; i++) {
+  console.log('ok');
+}
+// prints ok 3 times to the console
+```
+
+### do while loop
+
+The do while loop is running until the given condition will be false. This is working similarly to Java and C.
+
+```
+var i = 0;
+do {
+  i += 1;
+  console.log(i);
+} while (i < 5);
+```
+
+### while loop
+
+The while loop is running as long as the condition is true.
+
+```
+var i = 1;
+while (i <= 10) {
+  console.log(i);
+  i++;
+}
+```
+
+### for in loop
+
+The for...in loop
+
+```
+var obj = {a:1, b:2, c:3};
+
+for (var prop in obj) {
+  console.log("obj." + prop + " = " + obj[prop]);
+}
+```
+
+### for of loop
+### label statement
+### continue statement
+### label statement
 
 ## Strict mode
 

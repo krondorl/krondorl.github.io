@@ -83,6 +83,21 @@ var person = {
 };
 ```
 
+## Integer types
+
+There are several integer system types.
+
+```
+// decimal by default
+var d = 127;
+// octal with leading zero
+var o = 0157;
+// hexadecimal with 0x prefix
+var h = 0x1AF8;
+// binary with 0b prefix
+var b = 0b11;
+```
+
 ## Comments
 
 The syntax of comments is similar to C like languages:
@@ -497,20 +512,66 @@ while (i <= 10) {
 
 ### for in loop
 
-The for...in loop
+The for...in loop iterates over property names.
 
 ```
-var obj = {a:1, b:2, c:3};
+var person = {
+  name: "John Smith",
+  sex: "male",
+  age: 26,
+};
 
-for (var prop in obj) {
-  console.log("obj." + prop + " = " + obj[prop]);
+for (var prop in person) {
+  console.log("person." + prop + " = " + person[prop]);
 }
 ```
 
 ### for of loop
+
+The for...of loop iterates over values.
+
+```
+"use strict";
+let numbers = [1, 2, 3];
+
+for (let n of numbers) {
+   console.log(n); // 1, 2, 3
+}
+```
+
 ### label statement
+
+When break or continue used with a label statement, the program will jump to the label and continue running from there. Break can be used with any labeled statement, while continue can be used with looping labeled statements. As a best practice it is recommended to avoid labels to have a cleaner and simpler code.
+
+```
+var i, j;
+
+loop1:
+for (i = 0; i < 3; i++) {
+  for (j = 0; j < 3; j++) {
+    if (i === 1 && j === 1) {
+      continue loop1;
+    }
+    console.log(i, j);
+  }
+}
+```
+
 ### continue statement
-### label statement
+
+With continue you can restart a new iteration.
+
+```
+continue;
+```
+
+### break statement
+
+With break you can exit a loop completely.
+
+```
+break;
+```
 
 ## Strict mode
 
@@ -523,3 +584,20 @@ The `"use strict"` directive defines strict mode since ECMAScript 5. The strict 
   // ...
 })();
 ```
+
+## Debugging
+
+As you develop your code, errors will happen. It is important to find out the mistakes and correct them. Debugging helps you in this process.
+
+For debugging you can use the console.log function the the built in web developer component inside the browser. You can also use breakpoints with the browser, where the running stops at the specified line.
+
+```
+var x = 5;
+console.log(x); // 5
+```
+
+Browser | Shortcut
+---------|---------------
+Chrome  | Ctrl + Shift + J
+Firefox | Ctrl + Shift + J
+Internet Explorer | F12

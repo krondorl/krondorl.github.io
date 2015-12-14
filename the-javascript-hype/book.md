@@ -573,6 +573,48 @@ With break you can exit a loop completely.
 break;
 ```
 
+## Object oriented programming
+
+Recap: in object oriented programming we model and use things as objects. Objects can have properties and methods. The data and processing are inside of a class. When we instantiate a class then is called an object. A class can have a parent from which can inherit variables and methods. The variabels and methods can have different access like public, private and priviledged.
+
+Public: can be get, set, invoked anywhere.
+Private: access is restricted for priviledged methods.
+Priviledged: can be invoked publicly and can access private items.
+Static public: independent from instance and can be get, set, invoked anywhere.
+
+```
+// constructor definiton of object
+function Animal(name, type, age) {
+  // private method
+  function doubleWeight() {
+    weight *= 2;
+  }
+
+  // private variable
+  var weight = 88;
+
+  // public variable
+  this.color = "black";
+  this.name = name;
+}
+
+// public method
+Animal.prototype.showName = function () {
+  return this.name;
+}
+
+// static public property
+Animal.count = 0;
+
+// static public method
+Animal.countIncrease = function () {
+  Animal.count += 1;
+};
+
+// usage of Animal with constructor
+var a = new Animal("Bitsy", "cat", 3);
+```
+
 ## Strict mode
 
 The `"use strict"` directive defines strict mode since ECMAScript 5. The strict context prevents or throws errors and disables poorly created earlier features of the language. It is good for making fewer mistakes and detect things which can be harmful.
@@ -601,3 +643,4 @@ Browser | Shortcut
 Chrome  | Ctrl + Shift + J
 Firefox | Ctrl + Shift + J
 Internet Explorer | F12
+Edge | F12

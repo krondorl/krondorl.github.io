@@ -1,0 +1,152 @@
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+header {
+  background: linear-gradient(
+      rgba(100, 100, 100, 0.45), 
+      rgba(100, 100, 100, 0.45)
+    ),
+    url(https://upload.wikimedia.org/wikipedia/commons/4/40/Headphones_1.jpg) 50% -250px;
+  background-size: cover;
+  color: #fff;
+}
+
+header a {
+  color: #eee;
+}
+
+header a:hover {
+  color: #ddd;
+}
+
+.h1-title {
+  background: #666;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: .5em;
+}
+
+main {
+  padding-top: 3em;
+}
+
+footer {
+  border-top: 4px solid #ddd;
+  margin-top: 2em;
+  padding: 2em;
+  text-align: center;
+}
+
+footer a {
+  color: lightslategray;
+  font-weight: bold;
+}
+
+.brand {
+  display: inline-block;
+  font-size: 36px;
+  margin-top: .5em;
+}
+
+.brand span {
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-menu,
+.menu {
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+.footer-menu li,
+.menu li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.menu a {
+  display: inline-block;
+  padding: .5em;
+}
+
+.menu a:hover {
+  background-color: rgba(136, 136, 136, .3);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.headphones-type {
+  margin-top: 1em;
+}
+
+.history {
+  margin-top: 1em;
+}
+
+.img-fluid {
+  margin: 0 auto;
+}
+
+.full-bg {
+  background: 
+    linear-gradient(
+      rgba(50, 50, 100, 0.75), 
+      rgba(50, 50, 100, 0.75)
+    ),
+    url(https://upload.wikimedia.org/wikipedia/commons/7/73/Beyerdynamic_headphones_IBC_2008.jpg) 50% -300px;
+  background-size: cover;
+  color: #fff;
+  font-size: 40px;
+  min-height: 1000px;
+  padding: 5em;
+  text-align: center;
+}
+
+.full-bg h2 {
+  color: #8fd0ba;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.full-bg ul {
+  text-align: left;
+}
+
+.saying-section {
+  padding: 6em 0 8em;
+}
+
+.saying {
+  color: darkgreen;
+  font-size: 24px;
+}
+
+.what-others-title {
+  background: #666;
+  color: #fff;
+  display: inline-block;
+  font-size: 56px;
+  margin-bottom: 1em;
+  padding: .5em;
+}
+
+.history-section {
+  margin: 5em 0 6em;
+}
+
+.three-cols {
+  margin: 5em 0 6em;
+}

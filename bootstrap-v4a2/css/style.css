@@ -106,12 +106,13 @@ ol {
       rgba(50, 50, 100, 0.75), 
       rgba(50, 50, 100, 0.75)
     ),
-    url(https://upload.wikimedia.org/wikipedia/commons/7/73/Beyerdynamic_headphones_IBC_2008.jpg) 50% -300px;
+    url(https://upload.wikimedia.org/wikipedia/commons/7/73/Beyerdynamic_headphones_IBC_2008.jpg) 50% 0;
+  background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
   font-size: 40px;
   min-height: 1000px;
-  padding: 5em;
+  padding: 5em 0;
   text-align: center;
 }
 
@@ -149,4 +150,23 @@ ol {
 
 .three-cols {
   margin: 5em 0 6em;
+}
+
+@media (max-width: 768px) {
+  .what-others-title {
+    font-size: 24px;
+  } 
+  
+  .saying {
+    font-size: 18px;
+  }
+  
+  .full-bg {
+    font-size: 20px;
+    min-height: 500px;
+  }
+
+  .full-bg h2 {
+    font-size: 24px;
+  }  
 }

@@ -507,6 +507,7 @@ th {
 .my-photo {
   border: 12px solid #689368;
   margin-right: 33px;
+  max-width: 200px;
 }
 
 .center {

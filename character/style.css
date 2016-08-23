@@ -434,11 +434,24 @@ body {
 }
 
 .wrapper {
-  background: #fafafa url('http://image.flaticon.com/icons/svg/150/150209.svg') no-repeat 50% 90% / contain;
+  background: #fafafa;
   border: 3px dashed #9a9abe;
   margin: 20px auto 40px;
   padding: 30px 20px 50px;
+  position: relative;
   width: 960px;
+}
+
+.wrapper::after {
+  content: "";
+  background: url('http://image.flaticon.com/icons/svg/150/150209.svg');
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
 }
 
 .cf:before,

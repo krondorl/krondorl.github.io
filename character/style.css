@@ -434,7 +434,7 @@ body {
 }
 
 .wrapper {
-  background: #fafafa;
+  background: #fafafa url('alchemy.svg') no-repeat 50% 50% / contain;
   border: 3px dashed #9a9abe;
   margin: 20px auto 40px;
   padding: 30px 20px 50px;
@@ -444,7 +444,7 @@ body {
 
 .wrapper::after {
   content: "";
-  background: url('http://image.flaticon.com/icons/svg/150/150209.svg');
+  background: none;
   opacity: 0.5;
   top: 0;
   left: 0;

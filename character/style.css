@@ -428,13 +428,13 @@ th {
  */
 
 body {
-  background: #fefefe url('http://image.flaticon.com/icons/svg/150/150209.svg') no-repeat 50% 90% / contain;
+  background: #fefefe;
   color: #222;
   font: normal normal normal 18px/24px 'Source Sans Pro', sans-serif;
 }
 
 .wrapper {
-  background: #fafafa;
+  background: #fafafa url('http://image.flaticon.com/icons/svg/150/150209.svg') no-repeat 50% 90% / contain;
   border: 3px dashed #9a9abe;
   margin: 20px auto 40px;
   padding: 30px 20px 50px;

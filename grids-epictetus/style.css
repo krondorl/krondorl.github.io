@@ -59,8 +59,16 @@ ol {
   padding: 1rem;
 }
 
-.intro {
-  grid-area: "intro";
+.rule1 {
+  grid-area: rule1;
+}
+
+.rule2 {
+  grid-area: rule2;
+}
+
+.rule3 {
+  grid-area: rule3;
 }
 
 .h1 {
@@ -72,14 +80,16 @@ ol {
   padding: .5rem 1.5rem;
 }
 
-.intro .h2 {
+.rule1 .h2,
+.rule2 .h2,
+.rule3 .h2 {
   border-bottom: .5rem dotted var(--yellow);
   padding-bottom: .5rem;
   text-align: center;
 }
 
 .book-title {
-  grid-area: "book-title";
+  grid-area: book-title;
   grid-column: 1 / -1;
   text-align: center;
 }
@@ -87,7 +97,7 @@ ol {
 .unconquerable {
   font-size: 1.5rem;
   font-weight: bold;
-  grid-area: "unconquerable";
+  grid-area: unconquerable;
   grid-column: 1 / -1;
   text-align: center;
 }
@@ -97,13 +107,13 @@ ol {
 }
 
 .side-text {
-  grid-area: "side-text";
+  grid-area: side-text;
   grid-column: 2 / 4;
 }
 
 .empty-block {
   background: var(--yellow);
-  grid-area: "empty-block";
+  grid-area: empty-block;
   min-height: 10rem;
 }
 
@@ -112,7 +122,7 @@ ol {
 }
 
 .side-photo {
-  grid-area: "side-photo";
+  grid-area: side-photo;
   grid-column: 1 / -1;
 }
 
@@ -127,7 +137,7 @@ ol {
       grid-gap: 1rem;
       grid-template-areas:
         "book-title book-title book-title"
-        "intro intro intro"
+        "rule1 rule2 rule3"
         "unconquerable unconquerable unconquerable"
         "empty-block side-text side-text"
         "side-photo side-photo side-photo"

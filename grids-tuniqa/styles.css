@@ -1,0 +1,159 @@
+body {
+  color: #333;
+  font: normal normal normal 1rem/1.5 Tahoma, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.h1 {
+  margin: 0;
+}
+
+.h1,
+.h2,
+strong {
+  font-family: 'Source Sans Pro', Tahoma, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.h1,
+.main-nav {
+  display: inline-block;
+}
+
+.logo {
+  color: #fff;
+  font-size: 2rem;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.header {
+  background: #005fa8;
+  padding: 1rem 0;
+}
+
+.main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  color: #fff;
+}
+
+.menu-li {
+  display: inline-block;
+}
+
+.footer {
+  background: #fafafa;
+  border: 1px solid #eee;
+}
+
+a {
+  color: #005fa8;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.footer-main-list {
+  padding: 0;
+}
+
+.footer-main-list > li {
+  display: inline-block;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  vertical-align: top;
+}
+
+.head1 {
+  grid-area: head1;
+}
+
+.head2 {
+  grid-area: head2;
+}
+
+.head3 {
+  grid-area: head3;
+}
+
+.head4 {
+  grid-area: head4;
+}
+
+.mid1 {
+  grid-area: mid1;
+}
+
+.mid2 {
+  grid-area: mid2;
+}
+
+.foot1 {
+  grid-area: foot1;
+}
+
+.foot2 {
+  grid-area: foot2;
+}
+
+.foot3 {
+  grid-area: foot3;
+}
+
+.main-grid {
+  display: block;
+}
+
+.slogan {
+  background: #999;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .main-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(6, auto);
+    grid-gap: 2rem;
+    grid-template-areas:
+      "head1 head2"
+      "head3 head4"
+      "mid1 mid1"
+      "mid2 mid2"
+      "foot1 foot1"
+      "foot2 foot3"
+  }
+
+  .slogan {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .main-grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 2rem;
+    grid-template-areas:
+      "head1 head2 head3 head4"
+      "mid1 mid1 mid2 mid2"
+      "foot1 foot2 foot2 foot3"
+  }
+
+  .slogan {
+    font-size: 4rem;
+  }
+}

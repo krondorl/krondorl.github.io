@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css">
   <title>Adam Burucs - character sheet</title>
@@ -9,15 +10,17 @@
 <body>
   <div class="wrapper">
     <div class="center">
-      <img class="swords" src="crossed-swords-vector.svg" alt="Crossed swords logo">
+      <img class="swords" src="crossed-swords-vector.svg" alt="">
     </div>
-    <h1>&mdash;&mdash;&mdash; Real life character sheet &mdash;&mdash;&mdash;</h1>
-    <div class="cf">
-      <img class="my-photo" src="http://burucs.com/wp-content/themes/burucs-modern-2016/images/adam-2016-januar-1x.jpg" alt="Adam Burucs id photo">
-      <table class="general">
+    <h1 class="h1">Real life character sheet</h1>
+    <div class="grid-container">
+      <div class="photo-container">
+        <img class="photo" src="http://burucs.com/img/adam-2016-januar-1x.jpg" alt="Adam Burucs id photo">
+      </div>
+      <table class="general table">
         <thead>
           <tr>
-            <th colspan="2">&mdash; Character &mdash;</th>
+            <th class="th" colspan="2">&mdash; Character &mdash;</th>
           </tr>
         </thead>
         <tbody>
@@ -31,7 +34,7 @@
           </tr>
           <tr>
             <td>Class</td>
-            <td>Web developer / Graphic designer</td>
+            <td>Front-end designer</td>
           </tr>
           <tr>
             <td>Race</td>
@@ -46,8 +49,12 @@
             <td>middle</td>
           </tr>
           <tr>
+            <td>Philosophy</td>
+            <td>Stoicism</td>
+          </tr>
+          <tr>
             <td>Religion</td>
-            <td>pantheist</td>
+            <td>Panentheism</td>
           </tr>
           <tr>
             <td>Status</td>
@@ -60,10 +67,10 @@
         </tbody>
       </table>
 
-      <table class="appearance">
+      <table class="appearance table">
         <thead>
           <tr>
-            <th colspan="2">&mdash; Appearance &mdash;</th>
+            <th class="th" colspan="2">&mdash; Appearance &mdash;</th>
           </tr>
         </thead>
         <tbody>
@@ -73,7 +80,7 @@
           </tr>
           <tr>
             <td>Age</td>
-            <td>30</td>
+            <td>33</td>
           </tr>
           <tr>
             <td>Hair</td>
@@ -89,172 +96,168 @@
           </tr>
           <tr>
             <td>Weight</td>
-            <td>75 kg</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="cf">
-      <table class="stats">
-        <thead>
-          <tr>
-            <th colspan="2">&mdash; Stats &mdash;</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Strength</td>
-            <td>26</td>
-          </tr>
-          <tr>
-            <td>Dexterity</td>
-            <td>33</td>
-          </tr>
-          <tr>
-            <td>Constitution</td>
-            <td>36</td>
-          </tr>
-          <tr>
-            <td>Intelligence</td>
-            <td>63</td>
-          </tr>
-          <tr>
-            <td>Wisdom</td>
-            <td>47</td>
-          </tr>
-          <tr>
-            <td>Charisma</td>
-            <td>58</td>
+            <td>85 kg</td>
           </tr>
         </tbody>
       </table>
 
-      <table class="hard-skills">
-        <thead>
-          <tr>
-            <th colspan="2">&mdash; Hard skills &mdash;</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>front end web development</td>
-            <td>expert</td>
-          </tr>
-          <tr>
-            <td>back end web development  </td>
-            <td>expert</td>
-          </tr>
-          <tr>
-            <td>graphic design</td>
-            <td>advanced</td>
-          </tr>
-          <tr>
-            <td>article writing</td>
-            <td>intermediate</td>
-          </tr>
-        </tbody>
-      </table>
+    <table class="stats table">
+      <thead>
+        <tr>
+          <th class="th" colspan="2">&mdash; Stats &mdash;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Strength</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>Dexterity</td>
+          <td>38</td>
+        </tr>
+        <tr>
+          <td>Constitution</td>
+          <td>31</td>
+        </tr>
+        <tr>
+          <td>Intelligence</td>
+          <td>70</td>
+        </tr>
+        <tr>
+          <td>Wisdom</td>
+          <td>79</td>
+        </tr>
+        <tr>
+          <td>Charisma</td>
+          <td>66</td>
+        </tr>
+      </tbody>
+    </table>
 
-      <table class="soft-skills">
-       <thead>
-          <tr>
-            <th colspan="2">&mdash; Soft skills &mdash;</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>positive attitude</td>
-            <td>good</td>
-          </tr>
-          <tr>
-            <td>strong work ethic</td>
-            <td>good</td>
-          </tr>
-          <tr>
-            <td>teamplayer</td>
-            <td>good</td>
-          </tr>
-          <tr>
-            <td>active learner</td>
-            <td>expert</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table class="hard-skills table">
+      <thead>
+        <tr>
+          <th class="th" colspan="2">&mdash; Hard skills &mdash;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>front end web development</td>
+          <td>expert</td>
+        </tr>
+        <tr>
+          <td>back end web development  </td>
+          <td>advanced</td>
+        </tr>
+        <tr>
+          <td>graphic design</td>
+          <td>competent</td>
+        </tr>
+        <tr>
+          <td>article writing</td>
+          <td>competent</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <div class="cf">
-      <table class="languages">
-        <thead>
-          <tr>
-            <th colspan="2">&mdash; Languages &mdash;</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>English</td>
-            <td>fluent intermediate</td>
-          </tr>
-          <tr>
-            <td>Hungarian</td>
-            <td>native</td>
-          </tr>
-          <tr>
-            <td>Japanese</td>
-            <td>basic</td>
-          </tr>
-          <tr>
-            <td>German</td>
-            <td>basic</td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="hobbies">
-        <thead>
-          <tr>
-            <th colspan="2">&mdash; Hobbies &mdash;</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>music composition</td>
-            <td>expert</td>
-          </tr>
-          <tr>
-            <td>pencil drawing</td>
-            <td>early</td>
-          </tr>
-          <tr>
-            <td>Japanese studies</td>
-            <td>early</td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="equipment">
-        <thead>
-          <tr>
-            <th>&mdash; Equipment &mdash;</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>desktop and laptop PC</td>
-          </tr>
-          <tr>
-            <td>smartphone</td>
-          </tr>
-          <tr>
-            <td>e-book reader</td>
-          </tr>
-          <tr>
-            <td>headphones</td>
-          </tr>
-          <tr>
-            <td>paper, pencils, colour pens</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table class="soft-skills table">
+     <thead>
+        <tr>
+          <th class="th">&mdash; Soft skills &mdash;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>assertive communication</td>
+        </tr>
+        <tr>
+          <td>non-violent communication</td>
+        </tr>
+        <tr>
+          <td>teamplayer</td>
+        </tr>
+        <tr>
+          <td>active learner</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="languages table">
+      <thead>
+        <tr>
+          <th class="th" colspan="2">&mdash; Languages &mdash;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>English</td>
+          <td>fluent intermediate</td>
+        </tr>
+        <tr>
+          <td>Japanese</td>
+          <td>basic</td>
+        </tr>
+        <tr>
+          <td>German</td>
+          <td>basic</td>
+        </tr>
+        <tr>
+          <td>Hungarian</td>
+          <td>native</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="hobbies table">
+      <thead>
+        <tr>
+          <th class="th" colspan="2">&mdash; Hobbies &mdash;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>music composition</td>
+          <td>expert</td>
+        </tr>
+        <tr>
+          <td>audio mixing and mastering</td>
+          <td>expert</td>
+        </tr>
+        <tr>
+          <td>sound design</td>
+          <td>advanced</td>
+        </tr>
+        <tr>
+          <td>drawing</td>
+          <td>early</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="equipment table">
+      <thead>
+        <tr>
+          <th class="th">&mdash; Equipment &mdash;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>computer</td>
+        </tr>
+        <tr>
+          <td>smartphone</td>
+        </tr>
+        <tr>
+          <td>e-book reader</td>
+        </tr>
+        <tr>
+          <td>headphones</td>
+        </tr>
+        <tr>
+          <td>paper, pencils, colour pens</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   </div>
 </body>
 </html>

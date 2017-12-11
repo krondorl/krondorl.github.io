@@ -439,88 +439,23 @@ body {
   margin: 20px auto 40px;
   padding: 30px 20px 50px;
   position: relative;
-  width: 960px;
-}
-
-.wrapper::after {
-  content: "";
-  background: none;
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;   
-}
-
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
-}
-
-.cf:after {
-  clear: both;
-}
-
-.cf {
-  margin-bottom: 40px;
-}
-
-img,
-.general,
-.appearance,
-.stats,
-.hard-skills,
-.soft-skills,
-.languages,
-.hobbies {
-  float: left;
-  margin-right: 60px;
-}
-
-.hard-skills {
-  margin-left: 35px;
-  margin-right: 50px;
-}
-
-.languages {
-  margin-right: 30px;
+  max-width: 960px;
 }
 
 td {
   border-bottom: 1px solid #955d1c;
   padding: 8px 12px;
+  width: 50%;
 }
 
 tbody {
   border-left: 5px solid #955d1c;
 }
 
-h1 {
+.h1 {
   clear: both;
   color: #955d1c;
-  padding: 32px 16px;
   text-align: center;
-}
-
-th {
-  color: #566f6f;
-}
-
-.hobbies {
-  margin-right: 166px;
-}
-
-.general {
-  margin-right: 26px;
-}
-
-.my-photo {
-  border: 12px solid #689368;
-  margin-right: 33px;
-  max-width: 200px;
 }
 
 .center {
@@ -531,4 +466,100 @@ th {
   float: none;
   margin: 0 auto;
   max-width: 150px;
+}
+
+.grid-container {
+  display: block;
+}
+
+.photo-container {
+  grid-area: photo-container;
+  text-align: center;
+}
+
+.photo {
+  border: 6px solid #689368;
+  max-width: 260px;
+}
+
+.general {
+  grid-area: general;
+}
+
+.appearance {
+  grid-area: appearance;
+}
+
+.stats {
+  grid-area: stats;
+}
+
+.hard-skills {
+  grid-area: hard-skills;
+}
+
+.soft-skills {
+  grid-area: soft-skills;
+}
+
+.languages {
+  grid-area: languages;
+}
+
+.equipment {
+  grid-area: equipment;
+}
+
+.grid-container {
+  display: block;
+  text-align: center;
+}
+
+.table {
+  margin: 0 auto 2rem;
+  text-align: left;
+  width: 100%;
+}
+
+.th {
+  color: #566f6f;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 2rem;
+    grid-template-areas:
+      "photo-container general"
+      "appearance stats"
+      "hard-skills soft-skills"
+      "languages equipment";
+  }
+
+  .table {
+    margin: 0 0 2rem;
+  }
+
+  .photo-container {
+    text-align: left;
+  }
+
+  .wrapper {
+    margin: 20px 30px 40px;
+  }
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 2rem;
+    grid-template-areas:
+      "photo-container general appearance"
+      "stats hard-skills soft-skills"
+      "languages equipment .";
+  }
 }

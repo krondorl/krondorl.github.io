@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Adaptive table</title>
+  <style media="screen">
+    body {
+      font: normal normal normal 1rem/1.5 sans-serif;
+    }
+
+    .responsive-table {
+      font-size: 23px;
+    }
+
+    .responsive-table td {
+      padding: 11px;
+    }
+
+    .responsive-table tr > td:nth-child(-n+2) {
+      display: table-cell;
+    }
+
+    .responsive-table tr > td:nth-child(n+3) {
+      display: none;
+    }
+
+    @media (min-width: 500px) {
+      .responsive-table tr > td:nth-child(-n+4) {
+        display: table-cell;
+      }
+      .responsive-table tr > td:nth-child(n+5) {
+        display: none;
+      }
+    }
+
+    @media (min-width: 910px) {
+      .responsive-table tr > td:nth-child(-n+8) {
+        display: table-cell;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Adaptive table with breakpoints</h1>
+  <p>Works with fixed columns, based on nth child cells.</p>
+  <p>Using <a href="https://css-tricks.com/useful-nth-child-recipies/" target="_blank" rel="noopener">nth child recipe</a></p>
+  <table class="responsive-table">
+    <thead>
+      <tr>
+        <td>name</td>
+        <td>city</td>
+        <td>age</td>
+        <td>salary</td>
+        <td>email</td>
+        <td>last login</td>
+        <td>year</td>
+        <td>IQ</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Sanyi</td>
+        <td>Budapest</td>
+        <td>34</td>
+        <td>1000 EUR</td>
+        <td>sanya@sanya.hu</td>
+        <td>6th October</td>
+        <td>2017</td>
+        <td>122</td>
+      </tr>
+      <tr>
+        <td>Sanyi</td>
+        <td>Budapest</td>
+        <td>34</td>
+        <td>1000 EUR</td>
+        <td>sanya@sanya.hu</td>
+        <td>6th October</td>
+        <td>2017</td>
+        <td>122</td>
+      </tr>
+      <tr>
+        <td>Sanyi</td>
+        <td>Budapest</td>
+        <td>34</td>
+        <td>1000 EUR</td>
+        <td>sanya@sanya.hu</td>
+        <td>6th October</td>
+        <td>2017</td>
+        <td>122</td>
+      </tr>
+      <tr>
+        <td>Sanyi</td>
+        <td>Budapest</td>
+        <td>34</td>
+        <td>1000 EUR</td>
+        <td>sanya@sanya.hu</td>
+        <td>6th October</td>
+        <td>2017</td>
+        <td>122</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

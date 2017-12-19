@@ -51,7 +51,7 @@ var abcalc = {
 
 $(document).ready(function () {
   $("#calculate").on("click", function () {
-    var numbers = $("#numbers").val().split(','); 
+    var numbers = $("#numbers").val().split(',').map(Number);
     var avg = abcalc.avg(numbers);
     var prod = abcalc.prod(numbers);
     var min = abcalc.min(numbers);

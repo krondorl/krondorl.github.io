@@ -50,6 +50,16 @@ class Readability {
   }
 }
 
+function styleResult(result, score) {
+  result.classList.remove('easy');
+  result.classList.remove('difficult');
+  if (score >= 60) {
+    result.classList.add('easy');
+  } else {
+    result.classList.add('difficult');
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelector("#score-button").addEventListener("click", function () {
     const mainText = document.querySelector("#main-text").value;
@@ -57,6 +67,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const result   = document.querySelector("#result");
     let run = new Readability(mainText, language);
     run.calcScore();
-    result.innerHTML = run.score;
+    let score = run.score;
+    result.innerHTML = score;
+    styleResult(result, score);
   });
 });

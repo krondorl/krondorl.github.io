@@ -23,6 +23,7 @@ body {
   flex: 1;
   font-size: 4.5rem;
   font-weight: bold;
+  margin: 1rem;
   text-align: center;
 }
 

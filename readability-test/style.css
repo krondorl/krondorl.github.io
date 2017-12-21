@@ -4,8 +4,9 @@ body {
 
 #main-text {
   border: 2px solid #ccc;
-  flex: 3;
-  height: 300px;
+  flex: 2;
+  font-size: 1.2rem;
+  height: 600px;
   width: 50%;
 }
 
@@ -20,10 +21,21 @@ body {
 
 #result {
   flex: 1;
-  font-size: 1.5rem;
+  font-size: 4.5rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .layout {
   display: flex;
+}
+
+.easy {
+  background: #090;
+  color: #fff;
+}
+
+.difficult {
+  background: #900;
+  color: #fff;
 }

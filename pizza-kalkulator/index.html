@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Kalkulátor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Pizza kalkulátor</h1>
+  <p>Add meg a pizzák adatait és kiszámolom neked a legolcsóbbakat (terület, Ft/cm<sup>2</sup>).</p>
+  <form>
+    <p><button class="button-calculate">Kiszámol</button> <input class="button-reset" type="reset" value="Töröl"></p>
+    <table>
+      <thead>
+        <tr>
+          <td>átmérő (cm)</td>
+          <td>ár (Ft)</td>
+          <td>név</td>
+          <td>értékelés</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" name="pizza-diameter-0" value="32"></td>
+          <td><input type="text" name="pizza-price-0" value="1900"></td>
+          <td><input type="text" name="pizza-name-0" value="Négysajtos"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="pizza-diameter-1" value="52"></td>
+          <td><input type="text" name="pizza-price-1" value="3800"></td>
+          <td><input type="text" name="pizza-name-1" value="BBQ csirkés"></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+  <script src="pizza.js"></script>
+</body>
+</html>

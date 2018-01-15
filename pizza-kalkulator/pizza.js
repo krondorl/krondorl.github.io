@@ -4,15 +4,18 @@ document.addEventListener("DOMContentLoaded", function() {
     return (price / ((Math.pow((diameter), 2) * Math.PI) / 4));
   }
 
-  document.querySelector(".button-reset").addEventListener("click", function () {
+  document.querySelector(".button-reset").addEventListener("click", function (e) {
+    e.preventDefault();
     let inputs = Array.from(document.querySelectorAll("input[type=text]"));
     for (input of inputs) {
       input.setAttribute('value', '');
     }
   });
-  document.querySelector(".button-calculate").addEventListener("click", function () {
-    let inputs = Array.from(document.querySelectorAll("input[type=text]"));
+
+  document.querySelector(".button-calculate").addEventListener("click", function (e) {
+    e.preventDefault();
     let data   = [];
+    let inputs = Array.from(document.querySelectorAll("input[type=text]"));
     for (input of inputs) {
       let rawName      = input.name;
       let name         = rawName.split('--');

@@ -24,6 +24,10 @@ function scales() {
             "notes": ['D', 'E', 'F#', 'G', 'A', 'B', 'C#']
         },
         {
+            "scale": "D# major (E flat)",
+            "notes": ['D#', 'F', 'G', 'G#', 'A#', 'C', 'D']
+        },
+        {
             "scale": "E major",
             "notes": ['E', 'F#', 'G#', 'A', 'B', 'C#', 'D#']
         },
@@ -40,8 +44,16 @@ function scales() {
             "notes": ['G', 'A', 'B', 'C', 'D', 'E', 'F#']
         },
         {
+            "scale": "G# major",
+            "notes": ['G#', 'A#', 'C', 'C#', 'D#', 'F', 'G']
+        },
+        {
             "scale": "A major",
             "notes": ['A', 'B', 'C#', 'D', 'E', 'F#', 'G#']
+        },
+        {
+            "scale": "A# major",
+            "notes": ['A#', 'C', 'D', 'D#', 'F', 'G', 'A', '']
         },
         {
             "scale": "B major",

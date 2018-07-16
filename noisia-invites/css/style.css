@@ -1,0 +1,104 @@
+body {
+  background: #000 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  color: aliceblue;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 12px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.logo {
+  border-bottom: 1px dashed #fff;
+  font-weight: 900;
+  font-size: 48px;
+}
+
+.noisia {
+  border-bottom: 5px solid yellow;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.phace {
+  border-bottom: 4px solid orange;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.misanthrop {
+  border-bottom: 2px solid red;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.mindscape {
+  border-bottom: 2px solid lightgrey;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.noisia,
+.phace,
+.misanthrop,
+.mindscape {
+  margin: 0 0 1rem;
+}
+
+.box {
+  background: #eee;
+  color: #444;
+  margin: 3vw;
+  padding: 3vw;
+}
+
+.box__title {
+  margin-top: 0;
+}
+
+.box__p {
+  line-height: 2;
+  max-width: 80ch;
+}
+
+@media (min-width: 640px) {
+  .noisia {
+    font-size: 6vw;
+  }
+  
+  .phace {
+    font-size: 4vw;
+  }
+  
+  .misanthrop {
+    font-size: 2vw;
+  }
+
+  .mindscape {
+    font-size: 2vw;
+  }
+
+  .box {
+    margin: 2vw 10vw;
+    padding: 1vw;
+  }
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #fff;
+}
+
+.footer {
+  border-top: 1px dashed #fff;
+}
+
+img {
+  max-width: 100%;
+}

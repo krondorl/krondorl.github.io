@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Feeling</title>
+</head>
+<body>
+    <h1>Fibonacci Feeling</h1>
+    <p>These are the Fibonacci numbers</p>
+    <output>0 1 </output>
+    <script src="https://unpkg.com/rxjs@^7/dist/bundles/rxjs.umd.min.js"></script>
+    <script>
+        const { of } = rxjs;
+        const { expand, delay, take } = rxjs.operators;
+
+        const output = document.querySelector('output');
+
+        const fibonacci$ = of([0, 1, 1]).pipe(
+            expand(fiboArray => 
+                of([
+                    fiboArray[1],
+                    fiboArray[2],
+                    fiboArray[1] + fiboArray[2]
+                ]).pipe(
+                    delay(500)
+                )
+            ),
+            take(12)
+        );
+
+        const subscribe = fibonacci$.subscribe(val => output.textContent += ' ' + val[2]);
+    </script>
+</body>
+</html>

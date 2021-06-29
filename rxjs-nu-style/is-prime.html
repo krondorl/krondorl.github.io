@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is prime</title>
+</head>
+<body>
+    <h1>Is prime</h1>
+    <p>Check the console.</p>
+    <script src="https://unpkg.com/rxjs@^7/dist/bundles/rxjs.umd.min.js"></script>
+    <script>
+        const { range } = rxjs;
+        const { scan, filter, tap } = rxjs.operators;
+
+        const isPrimeRx = (num) => {
+            console.log('isPrime ', num);
+            let numbers$ = range(2, Math.sqrt(num)).pipe(
+                filter((i) => (num % i == 0)),
+                scan((a, c) => [...a, c], []),
+                tap((filtered) => console.log('filtered ', filtered))
+            ).subscribe((number) => console.log('end result ', number));
+        };
+
+        isPrimeRx(16);
+    </script>
+</body>
+</html>

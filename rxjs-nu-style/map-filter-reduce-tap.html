@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map-filter-reduce-tap</title>
+</head>
+<body>
+    <h1>Map-filter-reduce-tap</h1>
+    <p>Open console for results</p>
+    <script src="https://unpkg.com/rxjs@^7/dist/bundles/rxjs.umd.min.js"></script>
+    <script>
+        const { range } = rxjs;
+        const { map, filter, reduce, tap } = rxjs.operators;
+
+        const output = document.querySelector('output');
+
+        const numbers$ = range(1, 100).pipe(
+            tap((number) => console.log('before operators ', number)),
+            filter((number) => ((number % 2 === 0) || (number % 3 === 0))),
+            map((number) => number + 7),
+            reduce((acc, val) => acc + val)
+        ).subscribe((number) => console.log('end result ', number));
+
+    </script>
+</body>
+</html>

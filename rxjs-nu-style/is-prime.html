@@ -12,18 +12,47 @@
     <script src="https://unpkg.com/rxjs@^7/dist/bundles/rxjs.umd.min.js"></script>
     <script>
         const { range } = rxjs;
-        const { scan, filter, tap } = rxjs.operators;
+        const { scan, filter } = rxjs.operators;
 
         const isPrimeRx = (num) => {
             console.log('isPrime ', num);
-            let numbers$ = range(2, Math.sqrt(num)).pipe(
+
+            let divisors = [];
+            let numbers$ = range(2, Math.floor(Math.sqrt(num)) + 1).pipe(
                 filter((i) => (num % i == 0)),
                 scan((a, c) => [...a, c], []),
-                tap((filtered) => console.log('filtered ', filtered))
-            ).subscribe((number) => console.log('end result ', number));
+            ).subscribe((value) => divisors = value)
+            .unsubscribe();
+
+            console.log('divisors', divisors);
+
+            if (num <= 1) {
+                console.log('not a prime number');
+            } else {
+                if (num <= 3 && num > 1) {
+                    console.log('prime number');
+                } else {
+                    if (divisors.length > 0) {
+                        console.log('not a prime number');
+                    } else {
+                        console.log('prime number');
+                    }
+                }
+            }
+
+            console.log('********************');
         };
 
-        isPrimeRx(16);
+        isPrimeRx(-1);
+        isPrimeRx(0);
+        isPrimeRx(1);
+        isPrimeRx(2);
+        isPrimeRx(3);
+        isPrimeRx(4);
+        isPrimeRx(5);
+        isPrimeRx(10);
+        isPrimeRx(11);
+        isPrimeRx(100);
     </script>
 </body>
 </html>

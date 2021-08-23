@@ -22,34 +22,57 @@
     a:hover {
       color: #5e5e9d;
     }
+
+    .wrapper {
+      margin: 0 auto;
+      max-width: 960px;
+    }
+
+    .screen-reader-only {
+      position: absolute;
+      width: 1px;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+      white-space: nowrap;
+    }
   </style>
 </head>
 <body>
-  <h1>Pet projects of Adam Burucs</h1>
-  <p>I created these projects for personal development.</p>
-  <h2>CSS</h2>
-  <ul>
-    <li><a target="_blank" rel="noopener noreferrer" href="/noisia-invites/">Noisia Invites</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="/adaptive-table/">Adaptive Table</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="/grids-tuniqa/">Grids - Tuniqa</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="/grids-epictetus/">Grids - Epictetus</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="/grids-stoicism/">Grids - Stoicism</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="/character/">Real Life Character Sheet</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="/andrey-pushkarev/">Andrey Pushkarev A38 party</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="/flexbox-grid/">Flexbox grid</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="/infinity-ink/">Infinity Ink</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="/mbk/">MBK</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="/firegate-audio/">Firegate Audio</a></li>
-  </ul>
-  <h2>JavaScript</h2> 
-  <ul>
-    <li><a target="_blank" rel="noopener noreferrer" href="/rxjs-nu-style/">RxJS practice</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="/abcalc-es6/">Abcalc ES6 class</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="/fibonacci-vanilla-js/">Fibonacci with Vanilla JS</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="/abcalc/">Abcalc</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="/fibonacci/">Fibonacci</a></li>
-  </ul>
-  <p>Last update: 29th June 2021</p>
-  <p>Since 2015</p>
+  <div class="wrapper">
+    <header class="header">
+      <h1>Pet projects of Adam Burucs</h1>
+      <p>I created these projects for personal development.</p>
+    </header>
+    <main class="main">
+      <h2>CSS</h2>
+      <ul>
+        <li><a target="_blank" rel="noopener noreferrer" href="/sitebuild-prezi-like/">Sitebuild Prezi Like <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/grids-graphic/">Grids - Graphic Design<span class="screen-reader-only">(opens in a new tab)</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/noisia-invites/">Noisia Invites <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/adaptive-table/">Adaptive Table <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/grids-tuniqa/">Grids - Tuniqa <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/grids-epictetus/">Grids - Epictetus <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/grids-stoicism/">Grids - Stoicism <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/character/">Real Life Character Sheet <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/andrey-pushkarev/">Andrey Pushkarev A38 party <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/flexbox-grid/">Flexbox grid <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/infinity-ink/">Infinity Ink <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/mbk/">MBK <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/firegate-audio/">Firegate Audio <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+      </ul>
+      <h2>JavaScript</h2> 
+      <ul>
+        <li><a target="_blank" rel="noopener noreferrer" href="/rxjs-nu-style/">RxJS practice <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/abcalc-es6/">Abcalc ES6 class <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/fibonacci-vanilla-js/">Fibonacci with Vanilla JS <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/abcalc/">Abcalc <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/fibonacci/">Fibonacci <span class="screen-reader-only">(opens in a new tab)</span></a></li>
+      </ul>
+    </main>
+    <footer class="footer">
+      <p>Last update: 23th August 2021</p>
+      <p>Since 2015</p>
+    </footer>
+  </div>
 </body>
 </html>

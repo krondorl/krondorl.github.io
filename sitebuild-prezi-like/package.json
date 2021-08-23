@@ -1,0 +1,15 @@
+{
+  "name": "sitebuild-prezi-like",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Burucs",
+  "license": "ISC",
+  "dependencies": {
+    "stylelint": "^13.13.1",
+    "stylelint-order": "^4.1.0"
+  }
+}

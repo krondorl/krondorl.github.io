@@ -1,0 +1,487 @@
+:root {
+    --color-main-white: #ffffff;
+    --color-header-a: #475262;
+    --color-header-button: #3181ff;
+    --color-video-button: #a409b8;
+    --color-design-button: #00a0aa;
+    --color-body-copy: #152235;
+    --color-cta: #1aa651;
+    --color-footer-bg: #f3f5f9;
+    --color-footer-body-copy: #8e939c;
+    --color-hero-text-color: #929aa3;
+    --color-hero-image-shadow: rgba(0, 0, 0, 0.25);
+    --color-video-prezi-p: #747c87;
+    --color-video-prezi-li-shadow: rgb(21, 34, 53, 0.3);
+}
+
+:focus {
+    border-radius: 4px;
+    box-shadow: 0 0 0 5px var(--color-main-white),
+        0 0 0 10px var(--color-header-button);
+    outline: none;
+}
+
+/**
+ * technique from https://css-tricks.com/inclusively-hidden/
+ */
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.header {
+    align-content: space-between;
+    align-items: center;
+    display: block;
+    padding: 18px 15px;
+}
+
+.header__h1 {
+    margin: 0;
+}
+
+.header__logo {
+    background: url(../img/security.svg);
+    display: inline-block;
+    height: 36px;
+    width: 36px;
+}
+
+.header__nav {
+    display: none;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.header__select_menu {
+    display: block;
+    font-size: 24px;
+    line-height: 1.5;
+    margin-left: 0;
+    width: 100%;
+}
+
+.header__ul,
+.footer__ul,
+.favorite_apps__ul,
+.video_prezi__ul,
+.footer__social_ul,
+.products__ul {
+    list-style: none;
+    margin: 0 0 0 auto;
+    padding: 5px 0;
+    width: 100%;
+}
+
+.header__li {
+    display: inline-block;
+    margin-right: 35px;
+    vertical-align: middle;
+}
+
+.header__a {
+    color: var(--color-header-a);
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 7px 0;
+}
+
+.header__button {
+    background: var(--color-header-button);
+    border-radius: 3px;
+    color: var(--color-main-white);
+    font-size: 13px;
+    height: 32px;
+    letter-spacing: 1px;
+    line-height: 14px;
+    margin-top: 4px;
+    padding: 8px 30px;
+    text-transform: none;
+    white-space: nowrap;
+    width: 145px;
+}
+
+.header__a,
+.header__button {
+    font-weight: bold;
+}
+
+.hero__try_demo_button,
+.hero__registration_button {
+    border-radius: 4px;
+    color: var(--color-main-white);
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: .25px;
+    line-height: 36px;
+    padding: 18px 30px;
+}
+
+.hero__try_demo_button {
+    background: var(--color-cta);
+    margin-bottom: 30px;
+    margin-right: 22px;
+}
+
+.hero__registration_button {
+    background: var(--color-header-button);
+    margin-bottom: 30px;
+}
+
+.h1 {
+    color: var(--color-body-copy);
+    font-size: 50px;
+    letter-spacing: -.5px;
+    line-height: 110%;
+    margin-bottom: 27px;
+}
+
+.h2 {
+    color: var(--color-hero-text-color);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: .25px;
+    line-height: 28px;
+}
+
+.hero__h2,
+.hero__h3 {
+    max-width: 433px;
+}
+
+.hero__h2 {
+    margin-top: 4px;
+}
+
+.hero__h3 {
+    margin-bottom: 40px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 96px 15px;
+}
+
+.hero__image {
+    border-radius: 10px;
+    box-shadow: 0 4px 40px var(--color-hero-image-shadow);
+    height: auto;
+    width: 100%;
+    width: clamp(280px, 100%, 652px);
+}
+
+.hero__message {
+    margin-right: 0;
+}
+
+.favorite_apps,
+.video_prezi,
+.products {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.favorite_apps__h2,
+.video_prezi__h2 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 45px;
+    margin-top: 96px;
+}
+
+.favorite_apps__ul,
+.video_prezi__ul,
+.products__ul {
+    display: block;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.favorite_apps__li {
+    align-items: center;
+    display: flex;
+    flex: 165px;
+    flex-direction: column;
+    height: 118px;
+}
+
+.favorite_apps__img,
+.favorite_apps__title {
+    display: block;
+    text-align: center;
+}
+
+.favorite_apps__title {
+    margin-top: 18px;
+}
+
+.video_prezi {
+    margin-bottom: 42px;
+}
+
+.video_prezi__p {
+    color: var(--color-video-prezi-p);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    line-height: 24px;
+    margin: 0 auto 36px;
+    max-width: 880px;
+}
+
+.video_prezi__li {
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 var(--color-video-prezi-li-shadow);
+    display: flex;
+    flex: 360px;
+    flex-direction: column;
+    height: 273px;
+    margin-bottom: 15px;
+    max-width: 360px;
+    padding: 0;
+}
+
+.video_prezi__a,
+.video_prezi__div {
+    height: inherit;
+    padding: inherit;
+    text-align: left;
+}
+
+.video_prezi__img {
+    width: clamp(290px, 100%, 360px);
+}
+
+.video_prezi__span {
+    color: var(--color-body-copy);
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    padding: 10px 20px 20px;
+}
+
+.products {
+    padding-bottom: 84px;
+    padding-top: 60px;
+}
+
+.products__h2 {
+    margin-bottom: 60px;
+}
+
+.products__h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.products__li {
+    align-items: start;
+    display: flex;
+    flex: 1 0 360px;
+    flex-direction: column;
+    margin-bottom: 15px;
+    /* height: 485px; */
+}
+
+.products__a {
+    border-radius: 3px;
+    color: var(--color-main-white);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-top: 4px;
+    padding: 11px 36px;
+    text-transform: none;
+    white-space: nowrap;
+    width: 100%;
+    width: clamp(240px, 100%, 1000px);
+}
+
+.button__present {
+    background: var(--color-header-button);
+}
+
+.button__video {
+    background: var(--color-video-button);
+}
+
+.button__design {
+    background: var(--color-design-button);
+}
+
+.products__img {
+    border-radius: 4px;
+    height: auto;
+    width: 100%;
+    width: clamp(290px, 100%, 1000px);
+}
+
+.products__h3,
+.products__p {
+    text-align: left;
+}
+
+.products__p {
+    color: var(--color-video-prezi-p);
+    line-height: 24px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    min-height: 96px;
+}
+
+.footer {
+    background: var(--color-footer-bg);
+    color: var(--color-footer-body-copy);
+}
+
+.footer__wrapper {
+    display: block;
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 60px 15px;
+}
+
+.footer__left,
+.footer__right {
+    flex: 1;
+}
+
+.float__left_div {
+    float: none;
+    width: auto;
+}
+
+.footer__h3,
+.footer__a,
+.footer__time {
+    font-size: 13px;
+    letter-spacing: .5px;
+    line-height: 16px;
+}
+
+.footer__blog_a {
+    color: var(--color-header-button);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.footer__h3 {
+    color: var(--color-video-prezi-p);
+    text-transform: uppercase;
+}
+
+.footer__a {
+    color: var(--color-footer-body-copy);
+}
+
+.footer__time {
+    display: block;
+}
+
+.footer__social_ul {
+    display: inline-block;
+    padding: 0;
+}
+
+.footer__social_a,
+.footer__social_li {
+    display: inherit;
+}
+
+.footer__social_li {
+    margin-right: 10px;
+}
+
+.footer__copyright {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    line-height: 16px;
+    margin-bottom: 0;
+}
+
+.footer__blog_p {
+    margin-top: 0;
+}
+
+@media screen and (min-width: 580px) {
+    .favorite_apps__ul,
+    .video_prezi__ul,
+    .products__ul {
+        display: flex;
+    }
+
+    .float__left_div {
+        float: left;
+        width: 33.33%;
+    }
+
+    .header {
+        display: flex;
+    }
+
+    .header__select_menu {
+        margin-left: 15px;
+    }
+}
+
+@media screen and (min-width: 796px) {
+    .footer__wrapper {
+        display: flex;
+    }
+
+    .header {
+        padding: 18px 30px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .header__select_menu {
+        display: none;
+    }
+
+    .header__nav {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: row;
+    }
+
+    .hero__message {
+        margin-right: 30px;
+    }
+}

@@ -5,6 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Frontend projects as practice and self-expression.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap" rel="stylesheet">
   <title>Adam Burucs - pet projects page</title>
   <style>
     :root {
@@ -21,8 +24,7 @@
     }
 
     body {
-      background: #fefefe;
-      color: #555;
+      color: var(--color-main-white);
       font: 1rem/1.5rem Tahoma, sans-serif;
       margin: 0;
     }
@@ -46,10 +48,20 @@
 
     .header {
       background: var(--color-primary-light);
+      text-align: center;
+    }
+
+    .header::before {
+      background: linear-gradient(to right, var(--color-primary-dark), var(--color-main-white), var(--color-primary-light), var(--color-primary), var(--color-primary-dark));
+      content: '';
+      display: block;
+      height: 18px;
+      margin: -18px -18px 18px;
     }
 
     .main {
       background: var(--color-primary);
+      padding-top: 36px;
     }
 
     .footer {
@@ -74,31 +86,105 @@
     }
 
     .h1 {
-      border-bottom: 4px solid var(--color-primary-dark);
+      border-bottom: 9px solid var(--color-main-white);
       display: inline-block;
+      font-size: clamp(2rem, -0.875rem + 8.333vw, 3.5rem);
       line-height: 1;
+      margin: 18px 0;
+    }
+
+    .h2 {
+      font-size: clamp(1.5rem, -1rem + 8.333vw, 2rem);
+    }
+
+    .h1,
+    .h2 {
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .main {
+      text-align: center;
+    }
+
+    .main-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 320px));
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .main-item-img {
+      justify-self: center;
+      width: 100%;
     }
   </style>
 </head>
 <body>
   <header class="header">
     <div class="wrapper">
+      <div class="">
+        <svg width="172" height="170" class="img-medium" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172.188 170.66"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:14px;}</style></defs><title>adam-spiral-logo</title><path class="cls-1" d="M6.617,36.8a97.2,97.2,0,0,1,137.462,0h0a77.761,77.761,0,0,1,0,109.97,62.209,62.209,0,0,1-87.976,0,49.767,49.767,0,0,1,0-70.381,39.813,39.813,0,0,1,56.3,0,31.851,31.851,0,0,1,0,45.044,25.481,25.481,0,0,1-36.035,0,20.384,20.384,0,0,1,0-28.827h0a16.308,16.308,0,0,1,23.062,0,13.046,13.046,0,0,1,0,18.45h0" transform="translate(-1.667 -1.333)"></path></svg>
+      </div>
       <h1 class="h1">Pet projects of Adam Burucs</h1>
       <p class="p">I created these projects for personal development.</p>
     </div>
   </header>
   <main class="main">
     <div class="wrapper">
+      <div class="main-grid">
+        <div class="main-item">
+          <img loading="lazy" width="320" height="163" class="main-item-img" src="img/project_sitebuild_prezi_like.jpg" alt="">
+          <p><a class="a" target="_blank" rel="noopener noreferrer" href="/sitebuild-prezi-like/">Sitebuild Prezi Like <span class="screen-reader-only">(opens in a new tab)</span></a>
+            <br><span>#css</span>
+          </p>
+        </div>
+        <div class="main-item">
+          <img loading="lazy" width="320" height="163" class="main-item-img" src="img/project_grids_graphic.jpg" alt="">        
+          <p><a class="a" target="_blank" rel="noopener noreferrer" href="/grids-graphic/">Grids Graphic <span class="screen-reader-only">(opens in a new tab)</span></a>
+            <br><span>#css</span>
+          </p>
+        </div>
+        <div class="main-item">
+          <img loading="lazy" width="320" height="163" class="main-item-img" src="img/project_noisia_invites.jpg" alt="">
+          <p><a class="a" target="_blank" rel="noopener noreferrer" href="/noisia-invites/">Noisia Invites <span class="screen-reader-only">(opens in a new tab)</span></a>
+            <br><span>#css</span>
+          </p>
+        </div>
+        <div class="main-item">
+          <img loading="lazy" width="320" height="163" class="main-item-img" src="img/project_adaptive_table.jpg" alt="">
+          <p><a class="a" target="_blank" rel="noopener noreferrer" href="/adaptive-table/">Adaptive Table <span class="screen-reader-only">(opens in a new tab)</span></a>
+            <br><span>#css</span>
+          </p>
+        </div>
+        <div class="main-item">
+          <img loading="lazy" width="320" height="163" class="main-item-img" src="img/project_grids_tuniqa.jpg" alt="">
+          <p><a class="a" target="_blank" rel="noopener noreferrer" href="/grids-tuniqa/">Grids - Tuniqa <span class="screen-reader-only">(opens in a new tab)</span></a>
+            <br><span>#css</span>
+          </p>
+        </div>
+        <div class="main-item">
+          <img loading="lazy" width="320" height="163" class="main-item-img" src="img/project_grids_epictetus.jpg" alt="">
+          <p><a class="a" target="_blank" rel="noopener noreferrer" href="/grids-epictetus/">Grids - Epictetus <span class="screen-reader-only">(opens in a new tab)</span></a>
+            <br><span>#css</span>
+          </p>
+        </div>
+        <div class="main-item">
+          <img loading="lazy" width="320" height="163" class="main-item-img" src="img/project_stoicism.jpg" alt="">
+          <p><a class="a" target="_blank" rel="noopener noreferrer" href="/grids-stoicism/">Grids - Stoicism <span class="screen-reader-only">(opens in a new tab)</span></a>
+            <br><span>#css</span>
+          </p>
+        </div>
+        <div class="main-item">
+          <img loading="lazy" width="320" height="163" class="main-item-img" src="img/project_real_char_sheet.jpg" alt="">
+          <p><a class="a" target="_blank" rel="noopener noreferrer" href="/character/">Real Life Character Sheet <span class="screen-reader-only">(opens in a new tab)</span></a>
+            <br><span>#css</span>
+          </p>
+        </div>
+      </div>
+
       <h2 class="h2">CSS</h2>
       <ul class="ul">
-        <li><a class="a" target="_blank" rel="noopener noreferrer" href="/sitebuild-prezi-like/">Sitebuild Prezi Like <span class="screen-reader-only">(opens in a new tab)</span></a></li>
-        <li><a class="a" target="_blank" rel="noopener noreferrer" href="/grids-graphic/">Grids - Graphic Design<span class="screen-reader-only">(opens in a new tab)</span></a></li>
-        <li><a class="a" target="_blank" rel="noopener noreferrer" href="/noisia-invites/">Noisia Invites <span class="screen-reader-only">(opens in a new tab)</span></a></li>
-        <li><a class="a" target="_blank" rel="noopener noreferrer" href="/adaptive-table/">Adaptive Table <span class="screen-reader-only">(opens in a new tab)</span></a></li>
-        <li><a class="a" target="_blank" rel="noopener noreferrer" href="/grids-tuniqa/">Grids - Tuniqa <span class="screen-reader-only">(opens in a new tab)</span></a></li>
-        <li><a class="a" target="_blank" rel="noopener noreferrer" href="/grids-epictetus/">Grids - Epictetus <span class="screen-reader-only">(opens in a new tab)</span></a></li>
-        <li><a class="a" target="_blank" rel="noopener noreferrer" href="/grids-stoicism/">Grids - Stoicism <span class="screen-reader-only">(opens in a new tab)</span></a></li>
-        <li><a class="a" target="_blank" rel="noopener noreferrer" href="/character/">Real Life Character Sheet <span class="screen-reader-only">(opens in a new tab)</span></a></li>
         <li><a class="a" target="_blank" rel="noopener noreferrer" href="/andrey-pushkarev/">Andrey Pushkarev A38 party <span class="screen-reader-only">(opens in a new tab)</span></a></li>
         <li><a class="a" target="_blank" rel="noopener noreferrer" href="/flexbox-grid/">Flexbox grid <span class="screen-reader-only">(opens in a new tab)</span></a></li>
         <li><a class="a" target="_blank" rel="noopener noreferrer" href="/infinity-ink/">Infinity Ink <span class="screen-reader-only">(opens in a new tab)</span></a></li>
@@ -117,8 +203,7 @@
   </main>
   <footer class="footer">
     <div class="wrapper">
-      <p class="p">Last update: 23th August 2021</p>
-      <p class="p">Since 2015</p>
+      <p class="p">Last update: 23th August 2021. Since 2015. Made with love and coffee. <a class="a" target="_blank" rel="noopener noreferrer" href="https://github.com/krondorl/krondorl.github.io">View source <span class="screen-reader-only">(opens in a new tab)</span></a></p>
     </div>
   </footer>
 </body>

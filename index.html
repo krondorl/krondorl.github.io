@@ -107,7 +107,7 @@
     }
 
     .main-grid {
-      display: grid;
+      display: block;
       gap: 18px;
       grid-template-columns: repeat(auto-fit, minmax(200px, 320px));
       justify-content: space-between;
@@ -115,8 +115,16 @@
     }
 
     .main-item-img {
+      height: auto;
       justify-self: center;
+      max-width: 320px;
       width: 100%;
+    }
+
+    @media screen and (min-width: 580px) {
+      .main-grid {
+        display: grid;
+      }
     }
   </style>
 </head>
@@ -182,6 +190,36 @@
           </p>
         </div>
         <div class="main-item">
+          <img loading="lazy" width="320" height="163" class="main-item-img" src="img/project_andrey pushkarev.jpg" alt="">
+          <p><a class="a" target="_blank" rel="noopener noreferrer" href="/andrey-pushkarev/">Andrey Pushkarev A38 party <span class="screen-reader-only">(opens in a new tab)</span></a>
+            <br><span>#css</span>
+          </p>
+        </div>
+        <div class="main-item">
+          <img loading="lazy" width="320" height="163" class="main-item-img" src="img/project_flexbox.jpg" alt="">
+          <p><a class="a" target="_blank" rel="noopener noreferrer" href="/flexbox-grid/">Flexbox grid <span class="screen-reader-only">(opens in a new tab)</span></a>
+            <br><span>#css</span>
+          </p>
+        </div>
+        <div class="main-item">
+          <img loading="lazy" width="320" height="163" class="main-item-img" src="img/project_infinity_ink.jpg" alt="">
+          <p><a class="a" target="_blank" rel="noopener noreferrer" href="/infinity-ink/">Infinity Ink <span class="screen-reader-only">(opens in a new tab)</span></a>
+            <br><span>#css</span>
+          </p>
+        </div>
+        <div class="main-item">
+          <img loading="lazy" width="320" height="163" class="main-item-img" src="img/project_mbk.jpg" alt="">
+          <p><a class="a" target="_blank" rel="noopener noreferrer" href="/mbk/">MBK <span class="screen-reader-only">(opens in a new tab)</span></a>
+            <br><span>#css</span>
+          </p>
+        </div>
+        <div class="main-item">
+          <img loading="lazy" width="320" height="163" class="main-item-img" src="img/project_fga.jpg" alt="">
+          <p><a class="a" target="_blank" rel="noopener noreferrer" href="/firegate-audio/">Firegate Audio <span class="screen-reader-only">(opens in a new tab)</span></a>
+            <br><span>#css</span>
+          </p>
+        </div>
+        <div class="main-item">
           <img loading="lazy" width="163" height="163" class="main-item-img" src="img/js.svg" alt="">
           <p><a class="a" target="_blank" rel="noopener noreferrer" href="/rxjs-nu-style/">RxJS practice <span class="screen-reader-only">(opens in a new tab)</span></a>
             <br><span>#javascript</span>
@@ -212,21 +250,11 @@
           </p>
         </div>
       </div>
-
-      <h2 class="h2">CSS</h2>
-      <ul class="ul">
-        <li><a class="a" target="_blank" rel="noopener noreferrer" href="/andrey-pushkarev/">Andrey Pushkarev A38 party <span class="screen-reader-only">(opens in a new tab)</span></a></li>
-        <li><a class="a" target="_blank" rel="noopener noreferrer" href="/flexbox-grid/">Flexbox grid <span class="screen-reader-only">(opens in a new tab)</span></a></li>
-        <li><a class="a" target="_blank" rel="noopener noreferrer" href="/infinity-ink/">Infinity Ink <span class="screen-reader-only">(opens in a new tab)</span></a></li>
-        <li><a class="a" target="_blank" rel="noopener noreferrer" href="/mbk/">MBK <span class="screen-reader-only">(opens in a new tab)</span></a></li>
-        <li><a class="a" target="_blank" rel="noopener noreferrer" href="/firegate-audio/">Firegate Audio <span class="screen-reader-only">(opens in a new tab)</span></a></li>
-      </ul>
-
     </div>
   </main>
   <footer class="footer">
     <div class="wrapper">
-      <p class="p">Last update: 23th August 2021. Since 2015. Made with love and coffee. <a class="a" target="_blank" rel="noopener noreferrer" href="https://github.com/krondorl/krondorl.github.io">View source <span class="screen-reader-only">(opens in a new tab)</span></a></p>
+      <p class="p">Last update: 25th August 2021. Since 2015. Made with love and coffee. <a class="a" target="_blank" rel="noopener noreferrer" href="https://github.com/krondorl/krondorl.github.io">View source <span class="screen-reader-only">(opens in a new tab)</span></a></p>
     </div>
   </footer>
 </body>

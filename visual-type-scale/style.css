@@ -1,0 +1,73 @@
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+:root {
+    --clr-body: #ff0;
+    --clr-text: #222;
+    --clr-main-underline: #bbb;
+    --type-scale: 1.1;
+    --fs-base: 1rem;
+    --h6: calc(var(--fs-base) * var(--type-scale));
+    --h5: calc(var(--h6) * var(--type-scale));
+    --h4: calc(var(--h5) * var(--type-scale));
+    --h3: calc(var(--h4) * var(--type-scale));
+    --h2: calc(var(--h3) * var(--type-scale));
+    --h1: calc(var(--h2) * var(--type-scale));
+}
+
+body {
+    background: var(--clr-body);
+    color: var(--clr-text);
+    padding: 0 var(--fs-base);
+    line-height: 1.5;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 75ch;
+}
+
+h1 {
+    border-bottom: 0.5rem dashed var(--clr-main-underline);
+    font-size: var(--h1);
+    font-style: italic;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+h4 {
+    font-size: var(--h4);
+}
+
+h5 {
+    font-size: var(--h5);
+}
+
+h6 {
+    font-size: var(--h6);
+}
+
+.experiment {
+    border-bottom: 0.1rem solid var(--clr-text);
+}
+
+@media screen and (min-width: 480px) {
+    :root {
+        --type-scale: 1.15;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    :root {
+        --type-scale: 1.25;
+    }
+}

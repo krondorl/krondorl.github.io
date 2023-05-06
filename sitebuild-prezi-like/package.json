@@ -9,7 +9,7 @@
   "author": "Adam Burucs",
   "license": "ISC",
   "dependencies": {
-    "stylelint": "^14.12.1",
-    "stylelint-order": "^5.0.0"
+    "stylelint": "^15.6.1",
+    "stylelint-order": "^6.0.3"
   }
 }

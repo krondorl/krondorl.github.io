@@ -1,0 +1,24 @@
+:root {
+  --ff-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --fs-text: clamp(1rem, 2vw, 1.5rem);
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  display: flex;
+  font-family: var(--ff-base);
+  font-size: var(--fs-text);
+}
+
+main {
+  display: inline-block;
+  margin-inline: auto;
+  max-inline-size: 56ch;
+}
+
+input {
+  font-size: var(--fs-text);
+}
